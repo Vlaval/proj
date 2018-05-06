@@ -1,0 +1,48 @@
+.ps {
+  overflow: hidden;
+  overflow-anchor: none;
+  -ms-overflow-style: none;
+  touch-action: auto;
+  -ms-touch-action: auto;
+}
+.ps__rail-y {
+  display: none;
+  width: 5px;
+  right: 0;
+  position: absolute;
+}
+.ps__rail-x {
+  height: 6px;
+  bottom: 0;
+  background: #f7f5f5;
+  position: absolute;
+  border-radius: 3px;
+}
+.ps--active-y > .ps__rail-y,
+.ps--active-x > .ps__rail-x {
+  display: block;
+}
+.ps__thumb-y {
+  background-color: rgba(85, 85, 85, .35);
+  width: 5px;
+  right: 0;
+  position: absolute;
+}
+.ps__thumb-x {
+  background-color: #ff6666;
+  height: 6px;
+  bottom: 0;
+  position: absolute;
+  border-radius: 3px;
+}
+/*Firefox support*/
+@supports (-ms-overflow-style: none) {
+  .ps {
+    overflow: auto !important;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .ps {
+    overflow: auto !important;
+  }
+}

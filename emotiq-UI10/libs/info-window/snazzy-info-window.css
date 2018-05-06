@@ -1,0 +1,107 @@
+.si-float-wrapper {
+	position: absolute;
+	width: 100%;
+}
+[class*='si-wrapper'] {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	position: absolute;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	cursor: default;
+}
+.si-wrapper-bottom {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: reverse;
+	-ms-flex-direction: column-reverse;
+	flex-direction: column-reverse;
+	margin-top: 0;
+	margin-left: 0;
+	-webkit-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+}
+[class*='si-shadow-wrapper'] {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+.si-frame {
+	position: relative;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	z-index: 2;
+}
+.si-content-wrapper {
+	width: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	background-color: #FFF;
+	-webkit-box-shadow: 0 0 12px 3px rgba(82, 84, 84, 0.05);
+	box-shadow: 0 0 12px 3px rgba(82, 84, 84, 0.05);
+}
+.si-content {
+	width: 220px;
+	color: #333;
+	font-size: 14px;
+}
+.si-pointer-bg-bottom {
+	border-bottom-color: #FFF;
+}
+[class*='si-pointer-bg'] {
+	position: relative;
+	border: 10px solid transparent;
+	z-index: 4;
+}
+.si-pointer-border-top, .si-pointer-border-bottom {
+	left: 50%;
+	-webkit-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+}
+[class*='si-pointer-border'] {
+	position: absolute;
+	border: 10px solid transparent;
+	z-index: 3;
+}
+.si-pointer-border-bottom {
+	top: 0;
+	border-bottom-color: #FFF;
+}
+.si-pointer-bottom {
+	border-top: 0;
+}
+.map-shop-address {
+	font-family: "MuseoSansCyrl700";
+	display: inline-block;
+	margin-bottom: 20px;
+}
+.map-shop-phones-list,
+.map-shop-work-times-list {
+	font-family:  "MuseoSansCyrl300"
+}
+.map-shop-phones-list {
+	margin-bottom: 20px;
+}
+.map-shop-phones-list span,
+.map-shop-work-times-list span {
+	font-family: "MuseoSansCyrl700";
+}
+.map-shop-phones-item:nth-child(n + 2) {
+	padding-left: 33px;
+}
+.map-shop-phones-item,
+.map-shop-work-times-item {
+	margin-bottom: 2px;
+}
+.map-shop-phones-item:last-child,
+.map-shop-work-times-item:last-child {
+	margin-bottom: 0;
+}
