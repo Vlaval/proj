@@ -39,17 +39,18 @@ $(() => {
       }
       case 'save': {
         const $content = $('.js-posts-preview');
-        const $slider = $content.find('.js-posts-slider');
-        const $imgLazyLoad = $content.find('.js-img-lazy');
+        const $contentCopy = $content.clone();
+        const $slider = $contentCopy.find('.js-posts-slider');
+        const $imgLazyLoad = $contentCopy.find('.js-img-lazy');
 
         $imgLazyLoad.each((i, img) => {
           const src = $(img).attr('src');
           $(img).removeAttr('src').attr('data-src', src);
         });
 
-        $content.find('.js-post-content').removeAttr('data-post-content');
+        $contentCopy.find('.js-post-content').removeAttr('data-post-content');
         $slider.css('visibility', 'hidden');
-        const content = $content.html();
+        const content = $contentCopy.html();
 
         $.ajax({
           url: `http://localhost:3001/news-editor/save`,
