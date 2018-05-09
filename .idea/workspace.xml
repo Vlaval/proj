@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f36a0297-c8bd-498c-87b7-d83f697b79a3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emotiq-UI10/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/emotiq-UI10/blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emotiq-UI10/js/posts.json" beforeDir="false" afterPath="$PROJECT_DIR$/emotiq-UI10/js/posts.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/views/news-list/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/views/news-list/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/views/news-list/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/server/views/news-list/index.pug" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7061782">
+    <splitter split-orientation="horizontal" split-proportion="0.55246913">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
@@ -32,11 +30,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/server/api/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
+                <state relative-caret-position="150">
+                  <caret line="97" column="5" lean-forward="true" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -80,11 +78,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server/views/news-list/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="570">
-                  <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+                <state relative-caret-position="377">
+                  <caret line="57" column="23" lean-forward="true" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
                 </state>
               </provider>
             </entry>
@@ -92,7 +90,7 @@
           <file leaf-file-name="index.pug" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/server/views/item-editor/index.pug">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="585">
+                <state relative-caret-position="495">
                   <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
                 </state>
               </provider>
@@ -102,11 +100,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.pug" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.pug" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server/views/news-list/index.pug">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="735">
-                  <caret line="49" column="57" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
+                <state relative-caret-position="298">
+                  <caret line="49" column="55" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
                 </state>
               </provider>
             </entry>
@@ -120,10 +118,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="posts.json" pinned="false" current-in-tab="true">
+          <file leaf-file-name="posts.json" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/emotiq-UI10/js/posts.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="81810">
+                <state relative-caret-position="66450">
                   <caret column="340624" selection-start-column="340624" selection-end-column="340624" />
                 </state>
               </provider>
@@ -132,7 +130,7 @@
           <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/server/views/item-editor/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1005">
+                <state relative-caret-position="572">
                   <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
                 </state>
               </provider>
@@ -197,6 +195,8 @@
       <find>bxsli</find>
       <find>media</find>
       <find>blog-author</find>
+      <find>toLocale</find>
+      <find>new Date</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -225,14 +225,14 @@
         <option value="$PROJECT_DIR$/emotiq-UI10/blog.html" />
         <option value="$PROJECT_DIR$/server/views/news-list/style.css" />
         <option value="$PROJECT_DIR$/emotiq-UI10/css/style.css" />
-        <option value="$PROJECT_DIR$/server/views/news-list/index.js" />
         <option value="$PROJECT_DIR$/emotiq-UI10/js/posts.json" />
         <option value="$PROJECT_DIR$/emotiq-UI10/js/script.js" />
-        <option value="$PROJECT_DIR$/server/views/news-list/index.pug" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/emotiq-UI10/blog-full-post.html" />
         <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/server/api/index.js" />
+        <option value="$PROJECT_DIR$/server/views/news-list/index.pug" />
+        <option value="$PROJECT_DIR$/server/views/news-list/index.js" />
       </list>
     </option>
   </component>
@@ -269,13 +269,7 @@
             <path>
               <item name="proj_last" type="b2602c69:ProjectViewProjectNode" />
               <item name="proj_last" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="proj_last" type="b2602c69:ProjectViewProjectNode" />
-              <item name="proj_last" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="emotiq-UI10" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -342,25 +336,25 @@
       <workItem from="1525605842702" duration="4498000" />
       <workItem from="1525765994226" duration="6426000" />
       <workItem from="1525807794328" duration="5492000" />
-      <workItem from="1525857180952" duration="3581000" />
+      <workItem from="1525857180952" duration="6689000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185649000" />
+    <option name="totallyTimeSpent" value="188757000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1600" height="904" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.118429385" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17922735" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.33974358" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.33974358" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -369,7 +363,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -584,20 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/views/item-editor/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/views/item-editor/index.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/emotiq-UI10/blog.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7260">
@@ -626,13 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/views/news-list/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -647,16 +619,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/views/news-list/index.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="57" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/emotiq-UI10/js/posts.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81810">
+        <state relative-caret-position="66450">
           <caret column="340624" selection-start-column="340624" selection-end-column="340624" />
         </state>
       </provider>
@@ -685,10 +650,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server/views/item-editor/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/api/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
+        <state relative-caret-position="150">
+          <caret line="97" column="5" lean-forward="true" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/views/item-editor/index.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/views/news-list/index.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="49" column="55" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/views/news-list/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="57" column="23" lean-forward="true" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
         </state>
       </provider>
     </entry>

@@ -39,11 +39,11 @@ router.post('/:id', function (req, res, next) {
 
   form.on('fileBegin', function (name, file) {
     if (name === "img") {
-      file.name = Math.random().toString(36).substr(2, 9);
+      file.name = Math.random().toString(36).substr(2, 9) + path.extname(file.name);
       file.path = IMG_DIR + "/preview/" + file.name;
     }
     if (name === "authorImg") {
-      file.name = Math.random().toString(36).substr(2, 9);
+      // file.name = Math.random().toString(36).substr(2, 9) + path.extname(file.name);
       file.path = IMG_DIR + "/users/" + file.name;
     }
   });
@@ -108,7 +108,7 @@ router.post('/save', function (req, res) {
     git(repo)
       .exec(() => console.log('Starting push...'))
       .add('./*')
-      .commit("changed posts " + Date.now().toString())
+      .commit("changed posts " + (new Date).toLocaleString())
       .push(['-u', 'origin', 'master'], () => console.log('push done'));
 
     res.json('saved');
