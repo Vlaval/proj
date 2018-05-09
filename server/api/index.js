@@ -38,11 +38,11 @@ router.post('/:id', function (req, res, next) {
   if(id === 'save') return next();
 
   form.on('fileBegin', function (name, file) {
-    if (name === "img") {
+    if (name === "img" && file.name) {
       file.name = Math.random().toString(36).substr(2, 9) + path.extname(file.name);
       file.path = IMG_DIR + "/preview/" + file.name;
     }
-    if (name === "authorImg") {
+    if (name === "authorImg" && file.name) {
       // file.name = Math.random().toString(36).substr(2, 9) + path.extname(file.name);
       file.path = IMG_DIR + "/users/" + file.name;
     }
