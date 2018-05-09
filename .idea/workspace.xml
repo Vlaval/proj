@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f36a0297-c8bd-498c-87b7-d83f697b79a3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emotiq-UI10/blog-full-post.html" beforeDir="false" afterPath="$PROJECT_DIR$/emotiq-UI10/blog-full-post.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emotiq-UI10/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/emotiq-UI10/blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emotiq-UI10/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/emotiq-UI10/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emotiq-UI10/js/posts.json" beforeDir="false" afterPath="$PROJECT_DIR$/emotiq-UI10/js/posts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emotiq-UI10/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/emotiq-UI10/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,8 +26,8 @@
           <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/server/server.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+                <state relative-caret-position="345">
+                  <caret line="35" column="45" lean-forward="true" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
                 </state>
               </provider>
             </entry>
@@ -37,15 +35,19 @@
           <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server/api/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="116">
-                  <caret line="83" column="4" lean-forward="true" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
+                <state relative-caret-position="480">
+                  <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
                 </state>
               </provider>
             </entry>
           </file>
           <file leaf-file-name="sitemap.xml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sitemap.xml">
-              <provider selected="true" editor-type-id="text-editor" />
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="195">
+                  <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+                </state>
+              </provider>
             </entry>
           </file>
           <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
@@ -221,7 +223,6 @@
         <option value="$PROJECT_DIR$/server/views/item-editor/index.pug" />
         <option value="$PROJECT_DIR$/server/package.json" />
         <option value="$PROJECT_DIR$/emotiq-UI10/blog.html" />
-        <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/server/views/news-list/style.css" />
         <option value="$PROJECT_DIR$/emotiq-UI10/css/style.css" />
         <option value="$PROJECT_DIR$/server/views/news-list/index.js" />
@@ -230,6 +231,7 @@
         <option value="$PROJECT_DIR$/server/views/news-list/index.pug" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/emotiq-UI10/blog-full-post.html" />
+        <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/server/api/index.js" />
       </list>
     </option>
@@ -340,24 +342,25 @@
       <workItem from="1525605842702" duration="4498000" />
       <workItem from="1525765994226" duration="6426000" />
       <workItem from="1525807794328" duration="5492000" />
-      <workItem from="1525857180952" duration="1393000" />
+      <workItem from="1525857180952" duration="3581000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183461000" />
+    <option name="totallyTimeSpent" value="185649000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1600" height="904" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.118429385" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.118429385" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.33974358" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.33974358" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -668,20 +671,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        <state relative-caret-position="345">
+          <caret line="35" column="45" lean-forward="true" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sitemap.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/api/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="83" column="4" lean-forward="true" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
+        <state relative-caret-position="480">
+          <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
         </state>
       </provider>
     </entry>

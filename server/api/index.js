@@ -6,7 +6,7 @@ const {arrToMap, mapToArr} = require('../utils');
 const formidable = require('formidable');
 const cheerio = require('cheerio');
 const sm = require('sitemap');
-
+const git = require('simple-git');
 
 const PUBLIC_DIR = path.join(__dirname, '../../emotiq-UI10');
 const IMG_DIR = PUBLIC_DIR + '/images/blog';
@@ -102,7 +102,15 @@ router.post('/save', function (req, res) {
   $('#news-container').html(news);
 
   fs.writeFile(blog, $.html(), (err) => {
+    const repo = path.join(__dirname, '../../');
     if (err) throw err;
+
+    git(repo)
+      .exec(() => console.log('Starting push...'))
+      .add('./*')
+      .commit("changed posts " + Date.now().toString())
+      .push(['-u', 'origin', 'master'], () => console.log('push done'));
+
     res.json('saved');
   });
 });

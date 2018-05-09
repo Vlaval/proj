@@ -4,7 +4,7 @@ const fs = require('fs');
 const api = require('./api');
 const bodyParser = require('body-parser');
 const port = 3001;
-// const git = require('simple-git');
+const git = require('simple-git');
 
 const app = express();
 
@@ -24,16 +24,16 @@ app.listen(port, 'localhost', function (err) {
         console.log(err);
         return;
     }
-    // const repo = path.join(__dirname, '../');
-    // git(repo)
-    //     .exec(() => console.log('Starting pull...'))
-    //     .pull((err, update) => {
-    //         if(update && update.summary.changes) {
-    //             require('child_process').exec('npm restart');
-    //         }
-    //     })
-    //     .exec(() => console.log('pull done.'))
-    //     .log((err, log) => console.log(log))
+    const repo = path.join(__dirname, '../');
+    git(repo)
+        .exec(() => console.log('Starting pull...'))
+        .pull((err, update) => {
+            if(update && update.summary.changes) {
+                require('child_process').exec('npm restart');
+            }
+        })
+        .exec(() => console.log('pull done.'))
+        .log((err, log) => console.log(log));
 
     console.log('Listening at http://localhost:' + port);
 });
