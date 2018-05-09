@@ -65,18 +65,7 @@ $(() => {
     e.preventDefault();
     console.log("submit");
     const fd = new FormData($form[0]);
-    const image = $imageSelect[0].files[0];
-    const authorImage = $imageAuthorSelect[0].files[0];
-
     const textEditor = $('#editor').find('.ql-editor').html();
-
-    // if (image) {
-    //   fd.append('image', image);
-    // }
-    //
-    // if (authorImage) {
-    //   fd.append('authorImage', authorImage);
-    // }
 
     fd.append('content', textEditor);
 
@@ -155,7 +144,5 @@ $(() => {
         });
       }
     })
-
-    // editor.insertEmbed(range.index, 'image', imgPath + value, Quill.sources.USER);
   }
 });
