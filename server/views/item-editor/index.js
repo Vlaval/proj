@@ -89,7 +89,7 @@ $(() => {
       contentType: false,
       type: 'POST',
       success: function(data){
-        alert(JSON.stringify(data));
+        console.log(JSON.stringify(data));
         window.location.pathname = '/news-editor';
       }
     });
