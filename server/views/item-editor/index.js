@@ -124,4 +124,14 @@ $(() => {
     theme: 'snow'
   };
   const editor = new Quill('#editor', options);
+  const toolbar = editor.getModule('toolbar');
+
+  toolbar.addHandler('image', imageHandler);
+  function imageHandler() {
+    const imgPath = '/images/blog/content/';
+    const range = editor.getSelection();
+    const value = prompt('Insert image name (i.e. image.jpg)');
+
+    editor.insertEmbed(range.index, 'image', imgPath + value, Quill.sources.USER);
+  }
 });
