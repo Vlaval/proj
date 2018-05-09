@@ -13,7 +13,7 @@ const IMG_DIR = PUBLIC_DIR + '/images/blog';
 const MOCKS_FILE = PUBLIC_DIR + '/js/posts.json';
 
 router.get('/', function (req, res, next) {
-  res.render('news-list', {posts: mocks});
+  res.render('news-list', {posts: mocks.reverse()});
 });
 
 router.get('/:id', function (req, res, next) {

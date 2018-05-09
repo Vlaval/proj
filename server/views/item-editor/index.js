@@ -61,7 +61,7 @@ $(() => {
         console.log("no such command");
       }
     }
-  })
+  });
 
   $form.on('submit', (e) => {
     e.preventDefault();
