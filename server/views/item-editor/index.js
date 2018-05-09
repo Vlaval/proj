@@ -6,8 +6,6 @@ $(() => {
   const $image = $('.js-image');
   const $authorImage = $('.js-author-image');
   const itemId = $form.data('id');
-  // const prevImgPath = $imageSelect.data('prev-img');
-  // const prevAuthorImgPath = $imageAuthorSelect.data('prev-img');
 
   function readURL(input, $img) {
     if (input.files && input.files[0]) {
@@ -72,13 +70,13 @@ $(() => {
 
     const textEditor = $('#editor').find('.ql-editor').html();
 
-    if (image) {
-      fd.append('image', $imageSelect[0].files[0]);
-    }
-
-    if (authorImage) {
-      fd.append('authorImage', $imageSelect[0].files[0]);
-    }
+    // if (image) {
+    //   fd.append('image', image);
+    // }
+    //
+    // if (authorImage) {
+    //   fd.append('authorImage', authorImage);
+    // }
 
     fd.append('content', textEditor);
 
@@ -126,8 +124,38 @@ $(() => {
   function imageHandler() {
     const imgPath = '/images/blog/content/';
     const range = editor.getSelection();
-    const value = prompt('Insert image name (i.e. image.jpg)');
+    // const value = prompt('Insert image name (i.e. image.jpg)');
+    const $modal = $('.js-content-image-container');
+    const $modalInput = $modal.find('.js-content-image-input');
+    const $modalForm = $modal.find('.js-add-image-form');
+    let filename = '';
 
-    editor.insertEmbed(range.index, 'image', imgPath + value, Quill.sources.USER);
+    $modal.addClass('content-image-input--visible');
+    $modalInput.change(function (){
+      filename = $(this).val().split('\\').pop();
+    });
+
+    $modalForm.on('submit', (e) => {
+      e.preventDefault();
+      console.log("$modalInput.val()", $modalInput.val());
+      if ($modalInput.val()) {
+        const fd = new FormData($modalForm[0]);
+
+        $.ajax({
+          url: `http://localhost:3001/news-editor/save-image`,
+          data: fd,
+          processData: false,
+          contentType: false,
+          type: 'POST',
+          success: function(data) {
+            console.log(JSON.stringify(data));
+            $modal.removeClass('content-image-input--visible');
+            editor.insertEmbed(range.index, 'image', imgPath + filename, Quill.sources.USER);
+          }
+        });
+      }
+    })
+
+    // editor.insertEmbed(range.index, 'image', imgPath + value, Quill.sources.USER);
   }
 });

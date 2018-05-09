@@ -35,42 +35,57 @@ router.post('/:id', function (req, res, next) {
   const id = req.params.id;
   const form = new formidable.IncomingForm();
 
-  if(id === 'save') return next();
+  console.log("id", id);
 
-  form.on('fileBegin', function (name, file) {
-    if (name === "img" && file.name) {
-      file.name = Math.random().toString(36).substr(2, 9) + path.extname(file.name);
-      file.path = IMG_DIR + "/preview/" + file.name;
-    }
-    if (name === "authorImg" && file.name) {
-      // file.name = Math.random().toString(36).substr(2, 9) + path.extname(file.name);
-      file.path = IMG_DIR + "/users/" + file.name;
-    }
-  });
-
-  form.parse(req, function (err, fields, files) {
-    const mocksMap = arrToMap(mocks);
-    const {title, description, content, author, date} = fields;
-    const {img, authorImg} = files;
-    const item = {id};
-
-    if (title) item.title = title;
-    if (description) item.description = description;
-    if (content) item.content = content;
-    if (author) item.author = author;
-    if (date) item.date = date;
-    if (img.name) item.img = "/images/blog/preview/" + img.name;
-    if (authorImg.name) item.authorImg = "/images/blog/users/" + authorImg.name;
-
-    mocksMap[id] = Object.assign(mocksMap[id] || {}, item);
-
-    mocks = mapToArr(mocksMap);
-
-    fs.writeFile(MOCKS_FILE, JSON.stringify(mocks), function (err) {
-      if (err) console.log(err);
-      res.end('success')
+  if (id === 'save') {
+    next();
+  // } else if (id === 'save-image') {
+  //   console.log("saving");
+  //   form.on('fileBegin', function (name, file) {
+  //     console.log("fileBegin");
+  //     file.path = IMG_DIR + "/content/" + file.name;
+  //     res.end(file.name);
+  //   });
+  } else {
+    form.on('fileBegin', function (name, file) {
+      console.log("name", name);
+      if (name === "img" && file.name) {
+        file.name = Math.random().toString(36).substr(2, 9) + path.extname(file.name);
+        file.path = IMG_DIR + "/preview/" + file.name;
+      }
+      if (name === "authorImg" && file.name) {
+        file.path = IMG_DIR + "/users/" + file.name;
+      }
+      if (name === "newImg" && file.name) {
+        file.path = IMG_DIR + "/content/" + file.name;
+        return res.end("image saved");
+      }
     });
-  });
+
+    form.parse(req, function (err, fields, files) {
+      const mocksMap = arrToMap(mocks);
+      const {title, description, content, author, date} = fields;
+      const {img, authorImg} = files;
+      const item = {id};
+
+      if (title) item.title = title;
+      if (description) item.description = description;
+      if (content) item.content = content;
+      if (author) item.author = author;
+      if (date) item.date = date;
+      if (img && img.name) item.img = "/images/blog/preview/" + img.name;
+      if (authorImg && authorImg.name) item.authorImg = "/images/blog/users/" + authorImg.name;
+
+      mocksMap[id] = Object.assign(mocksMap[id] || {}, item);
+
+      mocks = mapToArr(mocksMap);
+
+      fs.writeFile(MOCKS_FILE, JSON.stringify(mocks), function (err) {
+        if (err) console.log(err);
+        res.end('success')
+      });
+    });
+  }
 });
 
 router.post('/save', function (req, res) {
