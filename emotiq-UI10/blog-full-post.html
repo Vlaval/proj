@@ -235,7 +235,7 @@
       <ul id="full-post-slider" class="blog-tiles blog-tiles-small" style="visibility:hidden">
         {{#each other}}
           <li class="tile-item content-article">
-            <img class="tile-item--image" alt={{img}} src={{img}}>
+            <img class="tile-item--image owl-lazy" alt={{img}} data-src={{img}}>
             <div class="tile-item--content">
               <a class="tile-item--title" href={{url}}/blog-full-post.html?id={{id}}>{{title}}</a>
             </div>
@@ -262,6 +262,9 @@
           url: window.location.origin
         });
 
+        document.title = current[0].title;
+        $('head').append( `<meta name="description" content="${current[0].description}">` );
+
         $("#post-container").html(html);
         setTimeout(() => {
           $('#full-post-slider').owlCarousel({
@@ -271,6 +274,7 @@
             navContainer: ".slider-controls-list",
             dotsContainer: ".slider-controls-dots",
             dots: true,
+            lazyLoad:true,
             onInitialized: function() {
               $('#full-post-slider').css('visibility', 'visible');
             },

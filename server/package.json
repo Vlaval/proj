@@ -1,0 +1,21 @@
+{
+  "name": "simple_api",
+  "version": "0.0.1",
+  "description": "core",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.13.3",
+    "formidable": "^1.2.1",
+    "pug": "^2.0.3",
+    "simple-git": "^1.92.0",
+    "sitemap": "^1.13.0"
+  },
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  }
+}

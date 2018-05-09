@@ -1,0 +1,61 @@
+extends ../main
+
+block style
+  style
+    include style.css
+
+block content
+  .blog-editor
+    .blog-editor__nav.js-nav
+      button.blog-editor__button.js-button(data-type='return')= 'return'
+      button.blog-editor__button.js-button(data-type='add')= 'add post'
+      button.blog-editor__button.js-button(data-type='save')= 'save posts'
+    .posts-list.js-posts-preview
+      ul.blog-tiles.-has-author.blog-tiles-big.js-posts-list
+        each postBig, i in posts
+          -
+            var id = postBig.id
+            var link = "/blog-full-post.html?id=" + id
+            var content = postBig.content
+            var img = postBig.img
+            var title = postBig.title
+            var authorImg = postBig.authorImg
+            var author = postBig.author
+            var date = postBig.date
+
+          if i < 2
+            li.tile-item.content-article(data-id=id).js-post
+              img.tile-item--image(src=img)
+              .tile-item--content(data-post-content=content).js-post-content
+                a.tile-item--title(href=link)= title
+                p
+                .blog-author
+                  img.blog-author--avatar(src=authorImg)
+                  .blog-author--name= author
+                  span.blog-author--date= date
+      ul.blog-tiles.-has-author.blog-tiles-small.post-slider.js-posts-list.js-posts-slider
+        each postSmall, i in posts
+          -
+            var id = postSmall.id
+            var link = "/blog-full-post.html?id=" + id
+            var content = postSmall.content
+            var img = postSmall.img
+            var title = postSmall.title
+            var authorImg = postSmall.authorImg
+            var author = postSmall.author
+            var date = postSmall.date
+
+          if i >= 2
+            li.tile-item.content-article(data-id=id).js-post
+              img.tile-item--image.owl-lazy(data-src=img)
+              .tile-item--content(data-post-content=content)
+                a.tile-item--title(href=link)= title
+                p
+                .blog-author
+                  img.blog-author--avatar(src=authorImg)
+                  .blog-author--name= author
+                  span.blog-author--date= date
+
+block script
+  script
+    include index.js

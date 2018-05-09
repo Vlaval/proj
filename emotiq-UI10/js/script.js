@@ -184,15 +184,6 @@ $(document).ready(function () {
     //});
 
     // posts slider
-    // $('.post-slider').bxSlider({
-    //     mode: 'fade',
-    //     pager: false,
-    //     // slideWidth: 200,
-    //     infiniteLoop: true,
-    //     minSlides: 3,
-    //     maxSlides: 3
-    // });
-
       setTimeout(() => {
         $('.post-slider').owlCarousel({
           margin: 30,
@@ -201,6 +192,7 @@ $(document).ready(function () {
           navContainer: ".slider-controls-list",
           dotsContainer: ".slider-controls-dots",
           dots: true,
+          lazyLoad:true,
           onInitialized: function() {
             $('.post-slider').css('visibility', 'visible');
           },
@@ -218,29 +210,6 @@ $(document).ready(function () {
         });
       }, 1000);
 
-
-    // $('.post-slider').owlCarousel({
-    //   margin: 30,
-    //   nav: true,
-    //   navText: ["<a href=\"javascript:void(0)\">&larr;</a>","<a href=\"javascript:void(0)\">&rarr;</a>"],
-    //   navContainer: ".slider-controls-list",
-    //   dotsContainer: ".slider-controls-dots",
-    //   dots: true,
-    //   responsive : {
-    //     // breakpoint from 0 up
-    //     0 : {
-    //       items: 1
-    //     },
-    //     // breakpoint from 480 up
-    //     600 : {
-    //       items: 2
-    //     },
-    //     // breakpoint from 768 up
-    //     960 : {
-    //       items: 3
-    //     }
-    //   }
-    // });
 
     var pageHeaderMenu = (function () {
         var openBtn = $('.menu-open-btn'),

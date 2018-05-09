@@ -1290,6 +1290,7 @@ h3.subtitle{
 .blog-author {
 	color: #fff;
 	overflow: hidden;
+	clear: both;
 }
 .blog-author .blog-author--avatar {
 	float: left;
@@ -1344,6 +1345,12 @@ h3.subtitle{
 }
 .blog-full-post ul li span {
 	font-weight: bold;
+}
+.blog-full-post p > img {
+	width: 50%;
+	height: auto;
+	float: left;
+	margin-right: 15px;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

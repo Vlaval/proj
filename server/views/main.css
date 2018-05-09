@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+.blog-editor__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: rgb(198, 214, 214);
+    text-align: center;
+}
+
+.blog-editor__button {
+    width: 100px;
+    margin: 10px;
+}

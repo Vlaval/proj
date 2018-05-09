@@ -1,0 +1,45 @@
+extends ../main
+
+block style
+  style
+    include style.css
+  link(href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet")
+
+block content
+  .blog-editor__nav.js-nav
+    button.blog-editor__button.js-button(data-type='return')= 'return'
+    button.blog-editor__button.js-button(data-type='save')= 'save'
+    button.blog-editor__button.js-button(data-type='delete')= 'delete'
+  form.post__form.js-form(data-id=post.id)
+    .post__form-field
+      | Date:
+      br
+      input.post__date(type='date' value=post.date name='date')
+    .post__form-field
+      | Main image:
+      br
+      img.post__image.js-image(src=post.img)
+      input.post__image-select.js-select(type='file' name='img')
+    .post__form-field
+      | Author:
+      br
+      img.post__author-image.js-author-image(src=post.authorImg)
+      input.post__image-select.js-author-select(type='file' name='authorImg')
+      input.post__author.js-author(type='text' name='author' value=post.author placeholder='author name')
+    .post__form-field
+      | Title:
+      br
+      input.post__title(type='text' value=post.title name='title' placeholder='title')
+    .post__form-field
+      | Description:
+      br
+      textarea.post__description(name='description' placeholder='description') !{post.description}
+    .post__form-field
+      | Content:
+      br
+      #editor !{post.content}
+
+block script
+  script(src='https://cdn.quilljs.com/1.3.6/quill.min.js')
+  script
+    include index.js
