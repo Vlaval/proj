@@ -36,11 +36,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/.gitignore">
               <provider selected="true" editor-type-id="text-editor">
                 <state>
-                  <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
+                  <caret lean-forward="true" />
                 </state>
               </provider>
             </entry>
@@ -49,7 +49,7 @@
             <entry file="file://$PROJECT_DIR$/sitemap.xml">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="195">
-                  <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+                  <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -80,20 +80,22 @@
           <file leaf-file-name="blog-full-post.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/emotiq-UI10/blog-full-post.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3975">
+                <state relative-caret-position="15">
                   <caret line="265" column="87" selection-start-line="265" selection-start-column="87" selection-end-line="265" selection-end-column="87" />
                   <folding>
                     <element signature="n#style#0;n#ul#0;n#script#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="e#31#37#1" expanded="true" />
+                    <element signature="e#31#37#1" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/server/views/news-list/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="197">
-                  <caret line="48" selection-start-line="48" selection-end-line="48" />
+                <state relative-caret-position="780">
+                  <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
                 </state>
               </provider>
             </entry>
@@ -241,8 +243,8 @@
         <option value="$PROJECT_DIR$/emotiq-UI10/blog-full-post.html" />
         <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/server/views/news-list/index.pug" />
-        <option value="$PROJECT_DIR$/server/views/news-list/index.js" />
         <option value="$PROJECT_DIR$/server/api/index.js" />
+        <option value="$PROJECT_DIR$/server/views/news-list/index.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -347,16 +349,15 @@
       <workItem from="1525605842702" duration="4498000" />
       <workItem from="1525765994226" duration="6426000" />
       <workItem from="1525807794328" duration="5492000" />
-      <workItem from="1525857180952" duration="7672000" />
+      <workItem from="1525857180952" duration="8152000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189740000" />
+    <option name="totallyTimeSpent" value="190220000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1600" height="904" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17922735" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -624,16 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/emotiq-UI10/blog-full-post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3975">
-          <caret line="265" column="87" selection-start-line="265" selection-start-column="87" selection-end-line="265" selection-end-column="87" />
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#script#9;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -644,7 +635,7 @@
     <entry file="file://$PROJECT_DIR$/sitemap.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -669,6 +660,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server/api/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/views/news-list/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/emotiq-UI10/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -681,24 +686,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/emotiq-UI10/blog-full-post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="265" column="87" selection-start-line="265" selection-start-column="87" selection-end-line="265" selection-end-column="87" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#script#9;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#31#37#1" expanded="true" />
+            <element signature="e#31#37#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/views/news-list/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
