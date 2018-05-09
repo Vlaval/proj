@@ -6,8 +6,8 @@ $(() => {
   const $image = $('.js-image');
   const $authorImage = $('.js-author-image');
   const itemId = $form.data('id');
-  const prevImgPath = $imageSelect.data('prev-img');
-  const prevAuthorImgPath = $imageAuthorSelect.data('prev-img');
+  // const prevImgPath = $imageSelect.data('prev-img');
+  // const prevAuthorImgPath = $imageAuthorSelect.data('prev-img');
 
   function readURL(input, $img) {
     if (input.files && input.files[0]) {
@@ -74,14 +74,10 @@ $(() => {
 
     if (image) {
       fd.append('image', $imageSelect[0].files[0]);
-    } else {
-      fd.append('prevImage', prevImgPath);
     }
 
     if (authorImage) {
       fd.append('authorImage', $imageSelect[0].files[0]);
-    } else {
-      fd.append('prevAuthorImage', prevAuthorImgPath);
     }
 
     fd.append('content', textEditor);
