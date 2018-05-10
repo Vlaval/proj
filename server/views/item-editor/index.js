@@ -7,6 +7,21 @@ $(() => {
   const $authorImage = $('.js-author-image');
   const itemId = $form.data('id');
 
+  function message(text, result, cb) {
+    const $container = $('.js-message');
+    $container.text(text);
+    if (result === "fail") {
+      $container.addClass("message--error");
+    } else {
+      $container.addClass("message--success")
+    }
+    setTimeout(() => {
+      $container.removeClass("message--success").removeClass("message--error");
+      $container.text('');
+      cb && cb();
+    }, 3000);
+  }
+
   function readURL(input, $img) {
     if (input.files && input.files[0]) {
       const reader = new FileReader();
@@ -34,14 +49,16 @@ $(() => {
     switch (action) {
       case 'delete': {
         const sure = confirm('Are you sure?');
-        console.log(itemId)
 
         if (sure) {
           $.ajax({
             url: `http://localhost:3001/news-editor/${itemId}`,
             type: 'DELETE',
-            success: function(data){
-              window.location.pathname = '/news-editor';
+            success: function(data) {
+              message(data, 'success', () => window.location.pathname = '/news-editor');
+            },
+            error: function (xhr) {
+              message("status: " + xhr.status + ", message: " + xhr.responseText, 'fail');
             }
           });
         }
@@ -63,7 +80,6 @@ $(() => {
 
   $form.on('submit', (e) => {
     e.preventDefault();
-    console.log("submit");
     const fd = new FormData($form[0]);
     const textEditor = $('#editor').find('.ql-editor').html();
 
@@ -76,8 +92,10 @@ $(() => {
       contentType: false,
       type: 'POST',
       success: function(data){
-        console.log(JSON.stringify(data));
-        window.location.pathname = '/news-editor';
+        message(data, 'success', () => window.location.pathname = '/news-editor');
+      },
+      error: function (xhr) {
+        message("status: " + xhr.status + ", message: " + xhr.responseText, 'fail');
       }
     });
   });
@@ -113,19 +131,35 @@ $(() => {
   function imageHandler() {
     const imgPath = '/images/blog/content/';
     const range = editor.getSelection();
-    const $modal = $('.js-content-image-container');
+    const $modal = $('.js-content-image-modal');
     const $modalInput = $modal.find('.js-content-image-input');
     const $modalForm = $modal.find('.js-add-image-form');
     let filename = '';
 
-    $modal.addClass('content-image-input--visible');
+    function showModal() {
+      $('html, body').css({
+        overflow: 'hidden',
+        height: '100%'
+      });
+      $modal.addClass('content-image-modal--visible');
+    }
+
+    function hideModal() {
+      $modal.removeClass('content-image-modal--visible');
+      $('html, body').css({
+        overflow: 'auto',
+        height: 'auto'
+      });
+    }
+
+    showModal();
+
     $modalInput.change(function (){
       filename = $(this).val().split('\\').pop();
     });
 
     $modalForm.on('submit', (e) => {
       e.preventDefault();
-      console.log("$modalInput.val()", $modalInput.val());
       if ($modalInput.val()) {
         const fd = new FormData($modalForm[0]);
 
@@ -136,12 +170,19 @@ $(() => {
           contentType: false,
           type: 'POST',
           success: function(data) {
-            console.log(JSON.stringify(data));
-            $modal.removeClass('content-image-input--visible');
+            message(data);
+            hideModal();
             editor.insertEmbed(range.index, 'image', imgPath + filename, Quill.sources.USER);
+          },
+          error: function (xhr) {
+            message("status: " + xhr.status + ", message: " + xhr.responseText, 'fail');
           }
         });
       }
+    });
+
+    $modal.on('click', (e) => {
+      if ($(e.target).hasClass('js-content-image-modal')) hideModal();
     })
   }
 });

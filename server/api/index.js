@@ -53,7 +53,6 @@ router.post('/:id', function (req, res, next) {
 
     form.parse(req, function (err, fields, files) {
       if(err) {
-        console.log(err);
         res.end(err.message);
       } else if(id !== 'save-image') {
         const mocksMap = arrToMap(mocks);
@@ -74,8 +73,8 @@ router.post('/:id', function (req, res, next) {
         mocks = mapToArr(mocksMap);
 
         fs.writeFile(MOCKS_FILE, JSON.stringify(mocks), function (err) {
-          if (err) console.log(err);
-          res.end('success')
+          if (err) console.error(err);
+          res.end('post saved');
         });
       } else {
         res.end('image saved');
@@ -117,7 +116,6 @@ router.post('/save', function (req, res) {
     if (err) throw err;
 
     git(repo)
-      .exec(() => console.log('Starting push...'))
       .add('./*')
       .commit("changed posts " + (new Date).toLocaleString())
       .push(['-u', 'origin', 'master'], () => console.log('push done'));
@@ -144,10 +142,9 @@ router.delete('/:id', function (req, res) {
       if(imgName) {
         fs.unlink(IMG_DIR + "/preview/" + imgName, (err) => {
           if (err) throw err;
-          res.end(`${imgName} was deleted`);
         });
       }
-      res.end();
+      res.end('post deleted');
     });
   }
 });

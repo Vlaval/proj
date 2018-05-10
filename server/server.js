@@ -26,14 +26,12 @@ app.listen(port, 'localhost', function (err) {
     }
     const repo = path.join(__dirname, '../');
     git(repo)
-        .exec(() => console.log('Starting pull...'))
         .pull((err, update) => {
             if(update && update.summary.changes) {
                 require('child_process').exec('npm restart');
             }
         })
-        .exec(() => console.log('pull done.'))
-        .log((err, log) => console.log(log));
+        .exec(() => console.log('pull done.'));
 
     console.log('Listening at http://localhost:' + port);
 });

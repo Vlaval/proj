@@ -2,6 +2,21 @@ $(() => {
   const $postsList = $('.js-posts-list');
   const $navPanel = $('.js-nav');
 
+  function message(text, result, cb) {
+    const $container = $('.js-message');
+    $container.text(text);
+    if (result === "fail") {
+      $container.addClass("message--error");
+    } else {
+      $container.addClass("message--success")
+    }
+    setTimeout(() => {
+      $container.removeClass("message--success").removeClass("message--error");
+      $container.text('');
+      cb && cb();
+    }, 3000);
+  }
+
   $postsList.on('click', '.js-post', (e) => {
     const post = e.currentTarget;
     const id = $(post).data('id');
@@ -17,20 +32,6 @@ $(() => {
     switch (action) {
       case 'edit': {
         window.location.pathname = `/news-editor/${itemId}`;
-        break;
-      }
-      case 'delete': {
-        const sure = confirm('Are you sure?');
-
-        if (sure) {
-          $.ajax({
-            url: `http://localhost:3001/news-editor/${itemId}`,
-            type: 'DELETE',
-            success: function(data){
-              $item.remove();
-            }
-          });
-        }
         break;
       }
       case 'add': {
@@ -59,9 +60,12 @@ $(() => {
           contentType: "application/json; charset=utf-8",
           processData: false,
           type: 'POST',
-          success: function(data){
-            console.log(JSON.stringify(data));
+          success: function(data) {
             $slider.css('visibility', 'visible');
+            message(data);
+          },
+          error: function (xhr) {
+            message("status: " + xhr.status + ", message: " + xhr.responseText, 'fail');
           }
         });
 
@@ -72,7 +76,7 @@ $(() => {
         break;
       }
       default: {
-        console.log("no such command");
+        message("no such command", "error");
       }
     }
   })

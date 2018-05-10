@@ -16,3 +16,26 @@
     width: 100px;
     margin: 10px;
 }
+
+.message {
+    visibility: hidden;
+    position: fixed;
+    right: 10%;
+    top: 10%;
+    min-width: 150px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+}
+
+.message--success {
+    visibility: visible;
+    background: green;
+}
+
+.message--error {
+    visibility: visible;
+    background: red;
+}
