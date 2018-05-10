@@ -48,12 +48,14 @@ router.post('/:id', function (req, res, next) {
       }
       if (name === "newImg" && file.name) {
         file.path = IMG_DIR + "/content/" + file.name;
-        return res.end("image saved");
       }
     });
 
-    if(id !== 'save-image') {
-      form.parse(req, function (err, fields, files) {
+    form.parse(req, function (err, fields, files) {
+      if(err) {
+        console.log(err);
+        res.end(err.message);
+      } else if(id !== 'save-image') {
         const mocksMap = arrToMap(mocks);
         const {title, description, content, author, date} = fields;
         const {img, authorImg} = files;
@@ -75,8 +77,10 @@ router.post('/:id', function (req, res, next) {
           if (err) console.log(err);
           res.end('success')
         });
-      });
-    }
+      } else {
+        res.end('image saved');
+      }
+    });
   }
 });
 

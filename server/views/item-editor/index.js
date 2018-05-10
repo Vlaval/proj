@@ -113,7 +113,6 @@ $(() => {
   function imageHandler() {
     const imgPath = '/images/blog/content/';
     const range = editor.getSelection();
-    // const value = prompt('Insert image name (i.e. image.jpg)');
     const $modal = $('.js-content-image-container');
     const $modalInput = $modal.find('.js-content-image-input');
     const $modalForm = $modal.find('.js-add-image-form');
