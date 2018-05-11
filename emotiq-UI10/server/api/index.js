@@ -13,7 +13,16 @@ const IMG_DIR = PUBLIC_DIR + '/images/blog';
 const MOCKS_FILE = PUBLIC_DIR + '/js/posts.json';
 
 router.get('/', function (req, res, next) {
-  res.render('news-list', {posts: mocks.sort((a, b) => b.showFirst ? 1 : Date.parse(b.date) - Date.parse(a.date))});
+  res.render('news-list', {posts: mocks.sort((a, b) => {
+      if (a.showFirst) {
+        return -1;
+      } else if (b.showFirst) {
+        return 1;
+      } else {
+        return Date.parse(b.date) - Date.parse(a.date);
+      }
+    })
+  });
 });
 
 router.get('/:id', function (req, res, next) {
@@ -66,13 +75,16 @@ router.post('/:id', function (req, res, next) {
         if (date) item.date = date;
         if (img && img.name) item.img = "/images/blog/preview/" + img.name;
         if (authorImg && authorImg.name) item.authorImg = "/images/blog/users/" + authorImg.name;
-        // if post "pinned" checkbox checked added showFirst property to post object
+        // if post "pinned" checkbox checked added showFirst=true to post object
         if (showFirst) {
           mocks.forEach((post) => {
             if (post.showFirst) delete post.showFirst;
           });
           item.showFirst = true;
+        } else {
+          item.showFirst = false;
         }
+
 
         const mocksMap = arrToMap(mocks);
         mocksMap[id] = Object.assign(mocksMap[id] || {}, item);

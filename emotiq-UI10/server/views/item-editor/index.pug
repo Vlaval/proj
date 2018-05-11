@@ -14,7 +14,7 @@ block content
     .post__form-field
       label(for="date") Date
       input#date.post__date(type='date' value=post.date name='date')
-      input#pinned.post__checkbox(type='checkbox' value=post.date name='showFirst')
+      input#pinned.post__checkbox(type='checkbox' value=post.date name='showFirst' checked=post.showFirst)
       label(for="pinned") pinned
     .post__form-field
       | Main image:
