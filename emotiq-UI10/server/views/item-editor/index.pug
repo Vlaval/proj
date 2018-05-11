@@ -12,9 +12,10 @@ block content
     button.blog-editor__button.js-button(data-type='delete')= 'delete'
   form.post__form.js-form(data-id=post.id)
     .post__form-field
-      | Date:
-      br
-      input.post__date(type='date' value=post.date name='date')
+      label(for="date") Date
+      input#date.post__date(type='date' value=post.date name='date')
+      input#pinned.post__checkbox(type='checkbox' value=post.date name='showFirst')
+      label(for="pinned") pinned
     .post__form-field
       | Main image:
       br

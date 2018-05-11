@@ -21,6 +21,11 @@
     background: #acdcff;
 }
 
+.post__date {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
 .post__title {
     width: 100%;
 }

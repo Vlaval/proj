@@ -14,10 +14,10 @@ app.set('view engine', 'pug');
 
 app.use(bodyParser.urlencoded({limit: '50mb', extended: false}));
 app.use(bodyParser.json({limit: '50mb'}));
-app.use(express.static('../emotiq-UI10'));
+app.use(express.static('../../emotiq-UI10'));
 app.use('/news-editor', api);
 
-app.get('/', (req, res) => fs.readFile('../emotiq-UI10/index.html', (err, data) => err ? console.log(err) : res.status(200).end(data)));
+app.get('/', (req, res) => fs.readFile('../../emotiq-UI10/index.html', (err, data) => err ? console.log(err) : res.status(200).end(data)));
 
 app.listen(port, 'localhost', function (err) {
     if (err) {
